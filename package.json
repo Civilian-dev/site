@@ -1,5 +1,5 @@
 {
-  "name": "site",
+  "name": "@civilian.dev/site",
   "version": "0.0.0",
   "private": true,
   "workspaces": [
@@ -15,12 +15,11 @@
   "devDependencies": {
     "eslint-config-custom": "*",
     "prettier": "latest",
-    "turbo": "latest"
+    "turbo": "^1.4.3"
   },
   "engines": {
     "npm": ">=7.0.0",
-    "node": ">=14.0.0"
+    "node": ">=16.0.0"
   },
-  "dependencies": {},
   "packageManager": "yarn@1.22.19"
 }

@@ -1,0 +1,38 @@
+---
+templateClass: tmpl-article
+permalink: "{{ page.fileSlug | slugify }}.html"
+---
+
+<html>
+  <head>
+    {# @todo get title from first #h1, get prefix from data #}
+    <title>{{ globals.titlePrefix }} | {{ title }} | {{ testing }}</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🟠</text></svg>">
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1 class='title'>{{title}}</h1>
+      </header>
+      <section class='content'>
+        {{ content | safe }}
+      </section>
+      <footer>
+        <nav role="navigation" aria-label="Pagination Navigation">
+        {% if prevPost.url %}
+          <p>
+            <strong>Previous</strong>:&nbsp;
+            <a class="previous" href="{{ prevPost.url }}">{{ prevPost.data.title }}</a>
+          </p>
+        {% endif %}
+        {% if nextPost.url %}
+          <p>
+            <strong>Next</strong>:&nbsp;
+            <a class="next" href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+          </p>
+        {% endif %}
+        </nav>
+      </footer>
+    </article>
+  </body>
+</html>

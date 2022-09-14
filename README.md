@@ -1,20 +1,24 @@
-# Turborepo starter
+[Turborepo]: https://turborepo.org/
+[Yarn]: https://classic.yarnpkg.com/lang/en/
+[Elleventy]: https://www.11ty.dev/
 
-This is an official Yarn v1 starter turborepo.
+# Civilian.dev site
+
+This monorepo powers the https://civilian.dev public site components and publishing pipelines.
 
 ## What's inside?
 
-This turborepo uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package manager. It includes the following packages/apps:
+This [Turborepo][Turborepo] uses [Yarn][Yarn] as a package manager.
+It includes the following packages/apps:
 
 ### Apps and Packages
 
+- `articles`: An [Eleventy][Eleventy] site for static blog content as rendered markdown.
+
+Boilerplate - to be updated or replaced:
 - `docs`: a [Next.js](https://nextjs.org) app
 - `web`: another [Next.js](https://nextjs.org) app
 - `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
 ### Utilities
 
@@ -24,27 +28,11 @@ This turborepo has some additional tools already setup for you:
 - [ESLint](https://eslint.org/) for code linting
 - [Prettier](https://prettier.io) for code formatting
 
-## Setup
+### Setup
 
-This repository is used in the `npx create-turbo` command, and selected when choosing which package manager you wish to use with your monorepo (Yarn).
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-yarn run build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-yarn run dev
-```
+- `yarn install` to install all dependencies
+- `yarn run dev` to develop all apps and packages
+- `yarn run build` to build all apps and packages
 
 ### Remote Caching
 
@@ -53,7 +41,6 @@ Turborepo can use a technique known as [Remote Caching](https://turborepo.org/do
 By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
 
 ```
-cd my-turborepo
 npx turbo login
 ```
 
